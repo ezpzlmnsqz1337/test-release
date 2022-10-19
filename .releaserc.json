@@ -1,0 +1,9 @@
+{
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/exec", {
+        "publishCmd": "./updateChangelog.sh ${nextRelease.version} ${branch.name} ${commits.length} ${Date.now()}"
+      }]
+    ]
+  }
